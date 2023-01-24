@@ -19,7 +19,9 @@
 .active-filter {
   background-color: aquamarine;
 }
-
+.strikethrough-text{
+  text-decoration: line-through;
+}
 .is-done {
   opacity: 0.5;
 }

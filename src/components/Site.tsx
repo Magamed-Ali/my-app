@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navigate, NavLink, Route, Routes} from 'react-router-dom';
+import {Navigate, NavLink, Route, Routes, useParams} from 'react-router-dom';
 import styles from './Site.module.css'
 import {PageOne} from "./pages/PageOne";
 import {PageTwo} from "./pages/PageTwo";
@@ -10,6 +10,8 @@ import {dataState} from "../data/dataState";
 
 
 export const Site = () => {
+    let parms = useParams()
+
 
     return (
         <>
@@ -23,9 +25,9 @@ export const Site = () => {
                 </div>
                 <div className={styles.content}>
                     <Routes>
-                        <Route path={'/'} element={<Navigate to={'/page/0'}/>}/>
+                        <Route path={'/'} element={<Navigate to={'/page/2'}/>}/>
 
-                        <Route path={'/page/:id '} element={<Page pages={dataState.pages}/>}/>
+                        <Route path={'/page/:id'} element={<Page pages={dataState.pages}/>}/>
 
                         {/*<Route path={'/page1'} element={<PageOne/>}/>*/}
                         {/*<Route path={'/page2'} element={<PageTwo/>}/>*/}
